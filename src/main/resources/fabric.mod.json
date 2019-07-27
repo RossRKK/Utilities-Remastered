@@ -1,0 +1,10 @@
+{
+  "id": "utilities_2",
+  "name": "Utilities Remastered",
+  "version": "2.0.0",
+  "side": "universal",
+  "description": "A remastered version of the utilities mod for Minecraft",
+  "initializers": [
+    "me.rosskelso.utilities_remastered.UtilitiesRemasteredMod"
+  ]
+}

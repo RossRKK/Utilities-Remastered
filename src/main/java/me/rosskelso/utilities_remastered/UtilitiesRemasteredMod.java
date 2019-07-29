@@ -1,5 +1,6 @@
 package me.rosskelso.utilities_remastered;
 
+import me.rosskelso.utilities_remastered.enchantment.SmeltingEnchantment;
 import me.rosskelso.utilities_remastered.enchantment.VoidEnchantment;
 import me.rosskelso.utilities_remastered.item.EnderPouch;
 import net.fabricmc.api.ModInitializer;
@@ -31,6 +32,14 @@ public class UtilitiesRemasteredMod implements ModInitializer {
     	    }
     	);
 	
+	public static final Enchantment SMELTING = new SmeltingEnchantment(
+    	    Enchantment.Weight.COMMON,
+    	    EnchantmentTarget.DIGGER,
+    	    new EquipmentSlot[] {
+    	    		EquipmentSlot.MAINHAND
+    	    }
+    	);
+	
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -41,5 +50,6 @@ public class UtilitiesRemasteredMod implements ModInitializer {
         
         Registry.register(Registry.ENCHANTMENT, new Identifier("utilities", "void"), VOID);
         Registry.register(Registry.ENCHANTMENT, new Identifier("utilities", "pulverize"), PULVERIZE);
+        Registry.register(Registry.ENCHANTMENT, new Identifier("utilities", "smelting"), SMELTING);
 	}
 }

@@ -3,7 +3,8 @@
     "package": "me.rosskelso.utilities_remastered.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        "AbstractTraderEntityMixin"
+        "AbstractTraderEntityMixin",
+        "BlockMixin"
     ],
     "injectors": {
         "defaultRequire": 1

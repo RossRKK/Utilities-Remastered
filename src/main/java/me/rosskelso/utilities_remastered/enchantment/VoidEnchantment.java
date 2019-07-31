@@ -3,7 +3,6 @@ package me.rosskelso.utilities_remastered.enchantment;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.rosskelso.utilities_remastered.UtilitiesRemasteredMod;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.enchantment.Enchantment;

@@ -1,7 +1,6 @@
 package me.rosskelso.utilities_remastered.mixin;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -11,7 +10,6 @@ import java.util.stream.Collectors;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
-import me.rosskelso.utilities_remastered.UtilitiesRemasteredMod;
 import me.rosskelso.utilities_remastered.enchantment.DropReplaceEnchantment;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

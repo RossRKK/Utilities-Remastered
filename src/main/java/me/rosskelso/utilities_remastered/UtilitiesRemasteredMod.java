@@ -1,5 +1,6 @@
 package me.rosskelso.utilities_remastered;
 
+import me.rosskelso.utilities_remastered.enchantment.PulverizeEnchant;
 import me.rosskelso.utilities_remastered.enchantment.SmeltingEnchantment;
 import me.rosskelso.utilities_remastered.enchantment.VoidEnchantment;
 import me.rosskelso.utilities_remastered.item.EnderPouch;
@@ -21,15 +22,17 @@ public class UtilitiesRemasteredMod implements ModInitializer {
     	    EnchantmentTarget.DIGGER,
     	    new EquipmentSlot[] {
     	    		EquipmentSlot.MAINHAND
-    	    }
+    	    },
+    	    0
     	);
 	
-	public static final Enchantment PULVERIZE = new VoidEnchantment(
+	public static final Enchantment PULVERIZE = new PulverizeEnchant(
     	    Enchantment.Weight.COMMON,
     	    EnchantmentTarget.DIGGER,
     	    new EquipmentSlot[] {
     	    		EquipmentSlot.MAINHAND
-    	    }
+    	    },
+    	    0
     	);
 	
 	public static final Enchantment SMELTING = new SmeltingEnchantment(
@@ -37,7 +40,8 @@ public class UtilitiesRemasteredMod implements ModInitializer {
     	    EnchantmentTarget.DIGGER,
     	    new EquipmentSlot[] {
     	    		EquipmentSlot.MAINHAND
-    	    }
+    	    },
+    	    1
     	);
 	
 	@Override

@@ -16,6 +16,11 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
+/**
+ * An item that lets the player access their ender chest while they're on the move.
+ * @author rossrkk
+ *
+ */
 public class EnderPouch extends Item {
 
 	public static final TranslatableText CONTAINER_NAME;
@@ -31,8 +36,11 @@ public class EnderPouch extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand)
     {
+    	//play the ender chest opening sound
         player.playSound(SoundEvents.BLOCK_ENDER_CHEST_OPEN, 1.0F, 1.0F);
+        //get the contents of the player's ender chest
     	EnderChestInventory enderChestInventory = player.getEnderChestInventory();
+    	//open a container gui for the ender chest
     	player.openContainer(new ClientDummyContainerProvider((int_1, playerInventory, playerEntity) -> {
             return GenericContainer.createGeneric9x3(int_1, playerInventory, enderChestInventory);
          }, CONTAINER_NAME));

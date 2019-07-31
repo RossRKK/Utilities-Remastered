@@ -18,6 +18,11 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
+/**
+ * An enchantment that replaces block drops with the smelted version of themselves.
+ * @author rossrkk
+ *
+ */
 public class SmeltingEnchantment extends DropReplaceEnchantment {
 	//TODO configure rarity and level
 	public SmeltingEnchantment(Weight enchantment$Weight_1, EnchantmentTarget enchantmentTarget_1,
@@ -30,6 +35,7 @@ public class SmeltingEnchantment extends DropReplaceEnchantment {
 			BlockEntity blockEntity, Entity entity, List<ItemStack> normalDrops, int level) {
 		List<ItemStack> list = new ArrayList<ItemStack>();
 		for (ItemStack drop:normalDrops) {
+			//lookup the result of smelting the current item
 			Optional<Recipe<?>> recipe = world.getRecipeManager().values().parallelStream().filter((recipe_1) -> {
 				return recipe_1.getType() == RecipeType.SMELTING && recipe_1.getPreviewInputs().parallelStream().anyMatch((i) -> i.test(drop));
 			}).findFirst();

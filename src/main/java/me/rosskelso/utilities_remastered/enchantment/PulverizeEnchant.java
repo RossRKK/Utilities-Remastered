@@ -19,6 +19,12 @@ import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 
+/***
+ * An enchantment that replaces block drops with "pulverized" versions of themselves (like a macerator or pulverizer).
+ * Mainly stone tpyes to sand. 
+ * @author rossrkk
+ *
+ */
 public class PulverizeEnchant extends DropReplaceEnchantment {
 	//TODO setup available levels and rarity
 	public PulverizeEnchant(Weight weight, EnchantmentTarget target, EquipmentSlot[] slots, int priority) {

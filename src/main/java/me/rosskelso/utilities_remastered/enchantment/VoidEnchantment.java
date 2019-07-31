@@ -14,6 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
+/**
+ * An an enchantment that remove all block drops.
+ * @author rossrkk
+ *
+ */
 public class VoidEnchantment extends DropReplaceEnchantment {
 
 	//TODO setup available levels and rarity

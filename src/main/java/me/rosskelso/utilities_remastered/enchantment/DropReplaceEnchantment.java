@@ -30,6 +30,16 @@ public abstract class DropReplaceEnchantment extends Enchantment {
 	}
 	
 	
-
+	/**
+	 * Given a list of dropped items, return the list of items that should actually be dropped.
+	 * @param blockState The state the block was in.
+	 * @param world The world the block was in.
+	 * @param blockPos The position of the block.
+	 * @param blockEntity Any block entity the block had.
+	 * @param entity The entity that broke the block (I think).
+	 * @param normalDrop The items that would be dropped normally.
+	 * @param level The level of the enchantment.
+	 * @return The items that the block should drop.
+	 */
 	public abstract List<ItemStack> replaceDrops(BlockState blockState, ServerWorld world, BlockPos blockPos, BlockEntity blockEntity, Entity entity, List<ItemStack> normalDrops, int level);
 }

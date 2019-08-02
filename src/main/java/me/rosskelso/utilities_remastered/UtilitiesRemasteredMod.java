@@ -4,6 +4,7 @@ import me.rosskelso.utilities_remastered.block.TemporaryBlock;
 import me.rosskelso.utilities_remastered.enchantment.PulverizeEnchant;
 import me.rosskelso.utilities_remastered.enchantment.SmeltingEnchantment;
 import me.rosskelso.utilities_remastered.enchantment.VoidEnchantment;
+import me.rosskelso.utilities_remastered.item.BlockWand;
 import me.rosskelso.utilities_remastered.item.EnderPouch;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -12,7 +13,6 @@ import net.minecraft.block.Material;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -50,15 +50,18 @@ public class UtilitiesRemasteredMod implements ModInitializer {
     	);
 	
 	public static final Block TEMP_BLOCK = new TemporaryBlock(FabricBlockSettings.of(Material.AIR).breakInstantly().dropsNothing().build());
+	public static final Item BLOCK_WAND = new BlockWand(new Item.Settings().group(ItemGroup.MISC).maxCount(1).maxDamage(1024));
 	
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		Registry.register(Registry.BLOCK, new Identifier("utilities", "temporary_block"), TEMP_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("utilities", "temporary_block"), new BlockItem(TEMP_BLOCK, new Item.Settings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("utilities", "temp_block"), TEMP_BLOCK);
+//		Registry.register(Registry.ITEM, new Identifier("utilities", "temporary_block"), new BlockItem(TEMP_BLOCK, new Item.Settings().group(ItemGroup.MISC)));
 
+		Registry.register(Registry.ITEM, new Identifier("utilities", "block_wand"), BLOCK_WAND);
+		
         Registry.register(Registry.ITEM, new Identifier("utilities", "ender_pouch"), ENDER_POUCH);
         
         Registry.register(Registry.ENCHANTMENT, new Identifier("utilities", "void"), VOID);

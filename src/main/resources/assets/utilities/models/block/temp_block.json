@@ -1,0 +1,7 @@
+    {
+      "parent": "block/cube_all",
+      "textures": {
+        "all": "utilities:block/temp_block"
+      }
+    }
+
